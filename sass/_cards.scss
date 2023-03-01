@@ -8,10 +8,22 @@
   grid-template-columns: repeat(4, 1fr);
 
   &__card-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $neutral-mostly-black-blue;
+      top: 0;
+      width: 80%;
+      aspect-ratio: 1/1.1;
+      z-index: -1;
+      border-radius: 0.8rem;
+    }
   }
 
   &__card {
@@ -25,16 +37,27 @@
     justify-content: center;
     align-items: center;
 
-    &::before {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    transform-origin: center;
+    transform-box: fill-box;
+
+    &.animated {
+      animation: 0.6s ease flipCard;
+    }
+
+    &::after {
       content: "";
       position: absolute;
-      background: $neutral-mostly-black-blue;
       top: 0;
       left: 0;
       right: 0;
-      bottom: -1rem;
-      z-index: -1;
-      border-radius: 0.8rem;
+      bottom: 0;
+      background: $neutral-dark-desaturated-blue;
+      transform: rotateX(180deg);
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
     }
   }
 
@@ -50,6 +73,8 @@
     opacity: 0.15;
 
     border-radius: 0.8rem 0.8rem 0 0;
+
+    z-index: 2;
   }
 
   &__stroke {
@@ -61,6 +86,7 @@
     transform: translateY(-50%);
     height: 1px;
     width: 100%;
+    z-index: 2;
   }
 
   &__oval {
@@ -72,6 +98,7 @@
     aspect-ratio: 1/2;
     border-radius: 0 0.6rem 0.6rem 0;
     background: $neutral-mostly-black-blue;
+    z-index: 3;
 
     &--left {
       left: 0;

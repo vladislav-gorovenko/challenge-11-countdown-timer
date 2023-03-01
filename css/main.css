@@ -16,6 +16,14 @@ body {
   font-family: "Red Hat Text", sans-serif;
 }
 
+@keyframes flipCard {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(-360deg);
+  }
+}
 header {
   text-align: center;
   display: flex;
@@ -52,10 +60,21 @@ header {
   grid-template-columns: repeat(4, 1fr);
 }
 .cards__card-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.cards__card-container::before {
+  content: "";
+  position: absolute;
+  background: hsl(234, 17%, 12%);
+  top: 0;
+  width: 80%;
+  aspect-ratio: 1/1.1;
+  z-index: -1;
+  border-radius: 0.8rem;
 }
 .cards__card {
   position: relative;
@@ -66,17 +85,27 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform-origin: center;
+  transform-box: fill-box;
 }
-.cards__card::before {
+.cards__card.animated {
+  animation: 0.6s ease flipCard;
+}
+.cards__card::after {
   content: "";
   position: absolute;
-  background: hsl(234, 17%, 12%);
   top: 0;
   left: 0;
   right: 0;
-  bottom: -1rem;
-  z-index: -1;
-  border-radius: 0.8rem;
+  bottom: 0;
+  background: hsl(236, 21%, 26%);
+  transform: rotateX(180deg);
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .cards__top-shadow {
   content: "";
@@ -88,6 +117,7 @@ header {
   background: #000000;
   opacity: 0.15;
   border-radius: 0.8rem 0.8rem 0 0;
+  z-index: 2;
 }
 .cards__stroke {
   content: "";
@@ -98,6 +128,7 @@ header {
   transform: translateY(-50%);
   height: 1px;
   width: 100%;
+  z-index: 2;
 }
 .cards__oval {
   content: "";
@@ -108,6 +139,7 @@ header {
   aspect-ratio: 1/2;
   border-radius: 0 0.6rem 0.6rem 0;
   background: hsl(234, 17%, 12%);
+  z-index: 3;
 }
 .cards__oval--left {
   left: 0;
