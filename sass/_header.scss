@@ -3,6 +3,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
+
+  .light-mode-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    scale: 1.5;
+    cursor: pointer;
+  }
 }
 
 .title {
@@ -20,5 +30,11 @@ header {
 
   @include media-min-width(430px) {
     transform: translateY(0);
+  }
+}
+
+body.day-mode {
+  .title {
+    color: $neutral-very-dark-blue;
   }
 }

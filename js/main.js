@@ -9,6 +9,7 @@ const daysCardEl = document.querySelector(".cards__card--days");
 const hoursCardEl = document.querySelector(".cards__card--hours");
 const minutesCardEl = document.querySelector(".cards__card--minutes");
 const secondsCardEl = document.querySelector(".cards__card--seconds");
+const lightModeSwitchEl = document.querySelector(".light-mode-switch");
 
 const futureTime = new Date().getTime() + 8 * 1000 * 60 * 60 * 24;
 
@@ -22,6 +23,20 @@ var interval = setInterval(() => {
 
   renderNumbers({ days, hours, minutes, seconds });
 }, 1000);
+
+// event listeners
+lightModeSwitchEl.addEventListener("click", () => {
+  console.log("hey");
+  if (document.body.classList.contains("day-mode")) {
+    document.body.classList.remove("day-mode");
+    lightModeSwitchEl.classList.value = "fa-solid fa-moon fa light-mode-switch";
+  } else {
+    document.body.classList.add("day-mode");
+    lightModeSwitchEl.classList.value = "fa-solid fa-sun fa light-mode-switch";
+  }
+});
+
+// functions
 
 function renderNumbers(data) {
   const { days, hours, minutes, seconds } = data;

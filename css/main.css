@@ -61,6 +61,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
+}
+header .light-mode-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  scale: 1.5;
+  cursor: pointer;
 }
 
 .title {
@@ -81,6 +90,10 @@ header {
   .title {
     transform: translateY(0);
   }
+}
+
+body.day-mode .title {
+  color: hsl(235, 16%, 14%);
 }
 
 .cards {
@@ -139,6 +152,7 @@ header {
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  border-radius: 0.8rem;
 }
 .cards__top-shadow {
   content: "";
@@ -253,13 +267,14 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer .fa {
+
+.fa {
   color: hsl(237, 18%, 59%);
   margin: 1rem;
   font-size: 2rem;
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-footer .fa:hover {
+.fa:hover {
   color: hsl(345, 95%, 68%);
   transform: scale(1.1);
 }
@@ -275,8 +290,13 @@ body {
   text-align: center;
 }
 
+body.day-mode {
+  background: hsl(0, 0%, 100%);
+}
+
 .falling-stars {
   height: 100vh;
+  visibility: visible;
   position: absolute;
   top: 0;
   left: 0;

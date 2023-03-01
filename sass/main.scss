@@ -19,8 +19,13 @@ body {
   text-align: center;
 }
 
+body.day-mode {
+  background: $neutral-white;
+}
+
 .falling-stars {
   height: 100vh;
+  visibility: visible;
   position: absolute;
   top: 0;
   left: 0;
