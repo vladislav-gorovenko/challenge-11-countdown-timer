@@ -1,3 +1,42 @@
+@keyframes fallingDownOne {
+  0% {
+    transform: translateX(-25%) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-30%) translateY(50%) scale(1.5);
+  }
+}
+
+@keyframes fallingDownTwo {
+  0% {
+    opacity: 0;
+    transform: translateX(25%) translateY(25%) scale(2);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(50%) translateY(100%) scale(2);
+  }
+}
+
 @keyframes flipCard {
   from {
     transform: rotateX(0deg);

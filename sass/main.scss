@@ -1,21 +1,44 @@
-@import "./reset", "./responsive", "./variables", "./animations", "./header",
+@import "./animations", "./reset", "./responsive", "./variables", "./header",
   "./cards", "./footer";
 
 body {
-  background: url("../img/bg-stars.svg"),
-    linear-gradient(
-      180deg,
-      #1d1e28 0.12%,
-      #231d2b 67.73%,
-      #261c2d 94.84%,
-      #261a2d 100%
-    );
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #1d1e28 0.12%,
+    #231d2b 67.73%,
+    #261c2d 94.84%,
+    #261a2d 100%
+  );
+  background-position: 100px;
   min-height: 100vh;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 20vh 1fr 20vh;
   text-align: center;
+}
+
+.falling-stars {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../img/bg-stars.svg");
+  background-repeat: repeat;
+  background-position: bottom;
+  background-size: contain;
+  z-index: -2;
+}
+
+.falling-stars--one {
+  animation: 9s linear fallingDownOne forwards infinite;
+}
+
+.falling-stars--two {
+  animation: 30s linear fallingDownTwo forwards infinite;
 }
 
 main {
