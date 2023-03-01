@@ -1,0 +1,23 @@
+footer {
+  background: url("../img/pattern-hills.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .fa {
+    color: $primary-grayish-blue;
+    margin: 1rem;
+    font-size: 2rem;
+
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    &:hover {
+      color: $primary-soft-red;
+      transform: scale(1.1);
+    }
+  }
+}

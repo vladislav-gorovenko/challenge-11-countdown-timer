@@ -1,0 +1,25 @@
+@import "./reset", "./responsive", "./variables", "./header", "./cards",
+  "./footer";
+
+body {
+  background: url("../img/bg-stars.svg"),
+    linear-gradient(
+      180deg,
+      #1d1e28 0.12%,
+      #231d2b 67.73%,
+      #261c2d 94.84%,
+      #261a2d 100%
+    );
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 1fr 20vh;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

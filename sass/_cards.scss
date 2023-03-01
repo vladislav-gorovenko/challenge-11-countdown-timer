@@ -1,0 +1,140 @@
+.cards {
+  margin: 2rem;
+  max-width: 688px;
+  flex: 1;
+  aspect-ratio: 688/184;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  &__card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card {
+    position: relative;
+    background: $neutral-dark-desaturated-blue;
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: $neutral-mostly-black-blue;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      z-index: -1;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__top-shadow {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+
+    background: #000000;
+    opacity: 0.15;
+
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+
+  &__stroke {
+    content: "";
+    position: absolute;
+    background: #000000;
+    opacity: 0.25;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+  }
+
+  &__oval {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.2rem;
+    aspect-ratio: 1/2;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background: $neutral-mostly-black-blue;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+      border-radius: 0.6rem 0 0 0.6rem;
+    }
+  }
+
+  &__number {
+    // have to make it scalable based on the size of the card
+    font-size: 2rem;
+    color: $primary-soft-red;
+
+    @include media-min-width(350px) {
+      font-size: 3rem;
+    }
+
+    @include media-min-width(400px) {
+      font-size: 4rem;
+    }
+
+    @include media-min-width(450px) {
+      font-size: 5rem;
+    }
+
+    @include media-min-width(500px) {
+      font-size: 6rem;
+    }
+
+    @include media-min-width(600px) {
+      font-size: 7rem;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    color: $primary-grayish-blue;
+    letter-spacing: 3px;
+    width: 80%;
+    word-break: break-all;
+    font-size: 0.4rem;
+
+    @include media-min-width(350px) {
+      font-size: 0.6rem;
+    }
+
+    @include media-min-width(400px) {
+      font-size: 0.7rem;
+    }
+
+    @include media-min-width(450px) {
+      font-size: 0.9rem;
+    }
+
+    @include media-min-width(500px) {
+      font-size: 1rem;
+    }
+
+    @include media-min-width(600px) {
+      font-size: 1.5rem;
+    }
+  }
+}

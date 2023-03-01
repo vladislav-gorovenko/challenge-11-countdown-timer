@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.title {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 2rem;
+  padding: 0;
+  transform: translateY(150%);
+  font-size: 2rem;
+}
+@media screen and (min-width: 400px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 430px) {
+  .title {
+    transform: translateY(0);
+  }
+}
+
+.cards {
+  margin: 2rem;
+  max-width: 688px;
+  flex: 1;
+  aspect-ratio: 688/184;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.cards__card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards__card {
+  position: relative;
+  background: hsl(236, 21%, 26%);
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards__card::before {
+  content: "";
+  position: absolute;
+  background: hsl(234, 17%, 12%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -1rem;
+  z-index: -1;
+  border-radius: 0.8rem;
+}
+.cards__top-shadow {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: #000000;
+  opacity: 0.15;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.cards__stroke {
+  content: "";
+  position: absolute;
+  background: #000000;
+  opacity: 0.25;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+}
+.cards__oval {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1.2rem;
+  aspect-ratio: 1/2;
+  border-radius: 0 0.6rem 0.6rem 0;
+  background: hsl(234, 17%, 12%);
+}
+.cards__oval--left {
+  left: 0;
+}
+.cards__oval--right {
+  right: 0;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+.cards__number {
+  font-size: 2rem;
+  color: hsl(345, 95%, 68%);
+}
+@media screen and (min-width: 350px) {
+  .cards__number {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 400px) {
+  .cards__number {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  .cards__number {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .cards__number {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .cards__number {
+    font-size: 7rem;
+  }
+}
+.cards__description {
+  text-align: center;
+  color: hsl(237, 18%, 59%);
+  letter-spacing: 3px;
+  width: 80%;
+  word-break: break-all;
+  font-size: 0.4rem;
+}
+@media screen and (min-width: 350px) {
+  .cards__description {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 400px) {
+  .cards__description {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  .cards__description {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .cards__description {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .cards__description {
+    font-size: 1.5rem;
+  }
+}
+
+footer {
+  background: url("../img/pattern-hills.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .fa {
+  color: hsl(237, 18%, 59%);
+  margin: 1rem;
+  font-size: 2rem;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+footer .fa:hover {
+  color: hsl(345, 95%, 68%);
+  transform: scale(1.1);
+}
+
+body {
+  background: url("../img/bg-stars.svg"), linear-gradient(180deg, #1d1e28 0.12%, #231d2b 67.73%, #261c2d 94.84%, #261a2d 100%);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 1fr 20vh;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=main.css.map */
