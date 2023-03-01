@@ -269,8 +269,8 @@ footer {
 }
 
 .fa {
-  color: hsl(237, 18%, 59%);
   margin: 1rem;
+  color: hsl(237, 18%, 59%);
   font-size: 2rem;
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -280,7 +280,6 @@ footer {
 }
 
 body {
-  overflow: hidden;
   background: linear-gradient(180deg, #1d1e28 0.12%, #231d2b 67.73%, #261c2d 94.84%, #261a2d 100%);
   background-position: 100px;
   min-height: 100vh;
@@ -292,6 +291,18 @@ body {
 
 body.day-mode {
   background: hsl(0, 0%, 100%);
+}
+
+.falling-stars-container {
+  height: 100vh;
+  width: 100vw;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
 }
 
 .falling-stars {
