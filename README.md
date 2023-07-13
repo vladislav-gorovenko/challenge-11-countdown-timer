@@ -1,3 +1,7 @@
+## Live
+
+You can check out the live version of the project here -> [https://vladislav-gorovenko.github.io/challenge-11-countdown-timer/](https://vladislav-gorovenko.github.io/challenge-11-countdown-timer/).
+
 # Launch Countdown Web App
 
 Welcome to my Launch Countdown Web App repository. This project is a solution to the Launch Countdown Web App challenge on [Frontend Mentor](https://www.frontendmentor.io).
@@ -18,10 +22,6 @@ This project was built using the following technologies:
 - SASS (BEM approach)
 - JS
 
-## Live
-
-You can check out the live version of the project here -> [https://vladislav-gorovenko.github.io/challenge-11-countdown-timer/](https://vladislav-gorovenko.github.io/challenge-11-countdown-timer/).
-
 ## Screenshots
 
 ![day-mode-mobile](./screenshot/mobile-view--day.png)
@@ -34,7 +34,7 @@ You can check out the live version of the project here -> [https://vladislav-gor
 For any inquiries or feedback, feel free to get in touch with me through:
 
 - [GitHub](https://github.com/vladislav-gorovenko)
-- [LinkedIn](https://www.linkedin.com/in/vladislavgorovenko/)
+- [LinkedIn](https://www.linkedin.com/in/vladislav-gorovenko-web/)
 - [FrontendMentor](https://www.frontendmentor.io/profile/martinideniam/)
 - [Telegram](https://t.me/vlad_webdev_iam)
 
